@@ -1,0 +1,122 @@
+@import 'responsive'
+
+.news
+	margin-top: -30px
+	padding-bottom: 90px
+	+media(md)
+		margin-top: -25px
+		padding-bottom: 65px
+	+media(sm)
+		margin-top: -8px
+		padding-bottom: 45px
+
+	.title--inner
+		padding-left: 45px
+
+	&__wrap
+		margin: 0 -20px
+		margin-top: 15px
+		+media(smx)
+			max-width: 400px
+			margin: 0 auto
+			margin-top: 15px
+
+	&__item
+		display: flex
+		flex-direction: column
+		background-color: #f49f0e
+		outline: none
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+		border-radius: 10px
+		padding: 20px 40px
+		padding-bottom: 25px
+		margin: 20px
+		+media(mdx)
+			padding: 20px
+			padding-bottom: 25px
+		+media(smx)
+			margin: 10px
+			//margin: 0px
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+
+		&:hover .news__link
+			background-color: #103359
+			color: #fff
+
+	&__image
+		margin-bottom: 15px
+		img
+			display: block
+			margin: 0 auto
+
+	&__elem
+		font-size: 16px
+		line-height: 1.1
+		color: #000
+		text-align: center
+		padding-bottom: 15px
+
+	&__link
+		cursor: pointer
+		display: block
+		max-width: 195px
+		width: 100%
+		font-size: 16px
+		line-height: 1.5
+		color: #f49f0e
+		text-align: center
+		text-transform: uppercase
+		background-color: #fff
+		border-radius: 20px 0px 20px 20px
+		padding: 8px 5px
+		border: none
+		outline: none
+		font-weight: bold
+		margin-left: auto
+		transition: 0.3s background-color, 0.3s color
+
+	&__holder
+		position: relative
+
+	&__arrow
+		position: absolute
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 30px
+		height: 30px
+		padding: 0px
+		top: calc(50% - 15px)
+		&:after
+			position: absolute
+			content: ' '
+			width: 20px
+			height: 20px
+			top: calc(50% - 10px)
+			left: calc(50% - 3px)
+			border-left: 3px solid #2476cc
+			border-top: 3px solid #2476cc
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&:hover:after
+			border-color: #103359
+		&--dir_left
+			left: -50px
+			+media(lb)
+				left: -42px
+			+media(sm)
+				left: -45px
+			+media(smx)
+				left: -30px
+
+		&--dir_right
+			transform: scaleX(-1)
+			right: -50px
+			+media(lb)
+				right: -42px
+			+media(sm)
+				right: -45px
+			+media(smx)
+				right: -30px

@@ -1,0 +1,60 @@
+@import 'responsive'
+
+.clients
+	padding-top: 15px
+	padding-bottom: 48px
+	+media(md)
+		padding-bottom: 32px
+	+media(sm)
+		padding-bottom: 20px
+
+	.slick-track
+		display: flex
+		align-items: center
+
+	&__wrap
+		margin: 0 -25px
+		padding-top: 80px
+		+media(sm)
+			padding-top: 40px
+			margin: 0px
+
+	&__item
+		margin: 0 25px
+		+media(xxs)
+			margin: 0px
+		img
+			display: block
+			margin: 0 auto
+
+	&__dots-list
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 58px
+		li
+			cursor: pointer
+			width: 19px
+			height: 19px
+			border: 2px solid #fff
+			outline: 2px solid #fff
+			border-radius: 20px
+			background-color: #2476cc
+			transition: 0.3s background-color, 0.3s border
+			&:not(:last-child)
+				margin-right: 26px
+
+			button
+				cursor: pointer
+				display: block
+				font-size: 0px
+				width: 100%
+				height: 100%
+				border: none
+				outline: none
+				padding: 0px
+				background-color: transparent
+
+			&.slick-active
+				border-color: #2476cc
+				background-color: #fff

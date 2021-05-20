@@ -1,0 +1,145 @@
+@import 'responsive'
+
+.block
+	padding-bottom: 86px
+	+media(md)
+		padding-bottom: 45px
+
+	&--inner
+		.block__item
+			padding-top: 35px
+
+	&--page
+		padding-bottom: 30px
+
+	&__wrap
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(smx)
+			margin: 0px
+
+	&__item
+		display: flex
+		flex-direction: column
+		position: relative
+		width: calc(100% /  4 - 40px)
+		background-color: #fff
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+		padding: 25px
+		margin: 0 20px
+		margin-bottom: 40px
+		+media(lgxs)
+			width: calc(100% /  3 - 40px)
+		+media(md)
+			width: calc(100% /  2 - 40px)
+		+media(smx)
+			width: 100%
+			max-width: 450px
+			margin: 0 auto
+			margin-bottom: 40px
+
+		a
+			display: inline-block
+
+	&__image
+		width: 64px
+		height: 64px
+		margin: 0 auto
+		margin-bottom: 35px
+		img
+			display: block
+
+	&__title
+		font-size: 16px
+		color: #000
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 20px	
+		font-weight: 900
+
+	&__btn
+		cursor: pointer
+		display: block
+		position: relative
+		width: 25px
+		height: 25px
+		border: none
+		outline: none
+		background-color: #fff
+		padding: 0px
+		margin: 0 auto
+		margin-top: auto
+		&:after
+			position: absolute
+			content: ' '
+			width: 14px
+			height: 14px
+			top: calc(50% - 10px)
+			left: calc(50% - 6px)
+			border-right: 2px solid #2476cc
+			border-bottom: 2px solid #2476cc
+			transform: rotate(45deg)
+			transition: 0.3s border
+		&:hover
+			&:after
+				border-color: #103359
+
+		&.active:after
+			border-color: #103359
+
+	&__submenu
+		display: none
+		position: absolute
+		z-index: 4
+		left: 0px
+		top: 100%
+		width: 100%
+		background-color: #fff
+		padding: 25px
+		padding-top: 17px
+		padding-bottom: 28px
+		box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1)
+		&:after
+			position: absolute
+			content: ' '
+			top: 0px
+			left: 50%
+			transform: translateX(-50%)
+			width: calc(100% - 50px)
+			height: 2px
+			background-color: rgba(51, 51, 51, 0.1)
+
+		li
+			display: block
+			max-width: max-content
+			margin: 0 auto
+
+	&__box
+		display: block
+		font-size: 14px
+		line-height: 1.2
+		color: #000
+		text-align: center
+		margin: 0 auto
+		margin-bottom: 24px
+		&--add
+			position: relative
+			padding-bottom: 30px
+			&:after
+				position: absolute
+				content: ' '
+				width: 10px
+				height: 10px
+				bottom: 0px
+				left: calc(50% - 5px)
+				border-right: 2px solid #2476cc
+				border-bottom: 2px solid #2476cc
+				transform: rotate(45deg)
+				transition: 0.3s border
+			&.active:after
+				border-color: #103359 
+
+			&+ul 
+				display: none

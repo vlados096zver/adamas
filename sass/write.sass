@@ -1,0 +1,29 @@
+@import 'responsive'
+
+.write
+	padding-bottom: 75px
+	+media(md)
+		padding-bottom: 25px
+	+media(sm)
+		padding-bottom: 15px
+	.title--inner
+		text-align: center
+
+	&+.main-footer
+		.main-footer__holder
+			&:after
+				left: 50%
+				transform: translateX(-50%)
+				background-color: rgba(51, 51, 51, 0.2)
+
+	&__wrap
+		margin-top: 32px
+		+media(md)
+			margin-top: 15px
+
+	&__error
+		color: #8B0000
+		padding-bottom: 15px
+		text-transform: uppercase
+		margin-left: 20px	
+		font-weight: bold

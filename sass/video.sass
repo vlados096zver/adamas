@@ -1,0 +1,103 @@
+@import 'responsive'
+
+.video
+	padding-bottom: 120px
+	+media(md)
+		padding-bottom: 85px
+	+media(sm)
+		padding-bottom: 65px
+
+	&__box
+		position: relative
+
+	&__wrap
+		margin-top: 40px
+
+	&__item
+		padding: 0 30px
+
+	&__row
+		max-width: 960px
+		margin: 0 auto
+
+	&__subtitle
+		font-size: 24px
+		line-height: 1.2
+		color: #000
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 45px
+		font-family: Roboto
+		+media(md)
+			font-size: 22px
+			margin-bottom: 40px
+		+media(sm)
+			font-size: 20px
+
+	&__desc
+		padding-bottom: 70px
+		+media(md)
+			padding-bottom: 45px
+		p
+			font-size: 18px
+			line-height: 1.7
+			color: #000
+			text-align: center
+			font-family: Roboto
+			+media(md)
+				font-size: 17px
+				line-height: 1.5
+
+	&__block
+		position: relative
+		padding-bottom: 41.7%
+		min-height: 200px
+		height: 0px
+		iframe
+			display: block
+			position: absolute
+			top: 0px
+			left: 0px
+			width: 100%
+			height: 100%
+			max-height: 500px
+			border-radius: 20px
+
+	&__arrow
+		position: absolute
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 30px
+		height: 30px
+		padding: 0px
+		top: 0px
+		transition: 0.3s top, 0.3s opacity
+		&:after
+			position: absolute
+			content: ' '
+			width: 20px
+			height: 20px
+			top: calc(50% - 10px)
+			left: calc(50% - 3px)
+			border-left: 3px solid #2476cc
+			border-top: 3px solid #2476cc
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&:hover:after
+			border-color: #103359
+		&--dir_left
+			left: 0px
+			+media(mdx)
+				left: -10px
+
+		&--dir_right
+			transform: scaleX(-1)
+			right: 0px
+			+media(mdx)
+				right: -10px
+
+		&.hide
+			opacity: 0

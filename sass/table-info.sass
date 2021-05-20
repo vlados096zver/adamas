@@ -1,0 +1,44 @@
+@import 'responsive'
+
+.table-info
+	&+.block
+		padding-bottom: 70px
+		+media(md)
+			padding-bottom: 35px
+
+	&__item
+		background-color: #fff
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1)
+		border-radius: 10px
+		padding: 30px 40px
+		padding-bottom: 15px
+		margin-bottom: 90px
+		+media(md)
+			padding: 25px 20px
+			padding-bottom: 15px
+			margin-bottom: 50px
+
+	&__wrap
+		overflow: hidden
+		overflow-x: auto
+		table
+			width: 100%
+			min-width: 900px
+			tr
+				th, td
+					font-size: 16px
+					line-height: 1.2
+					text-transform: uppercase
+
+				th
+					padding-bottom: 20px
+					font-weight: 900
+
+				td
+					padding: 20px 0
+					padding-right: 10px
+					&:not(:first-child)
+						text-align: center
+
+				&:not(:last-child)
+					border-bottom: 2px solid rgba(51, 51, 51, 0.5) 

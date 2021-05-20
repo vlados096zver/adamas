@@ -1,0 +1,92 @@
+@import 'responsive'
+
+.info
+	&__holder
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+media(lgs)
+			flex-direction: column
+			justify-content: center
+
+	&__wrap
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		+media(lgs)
+			flex-wrap: wrap
+		+media(sm)
+			flex-direction: column
+
+	&__item
+		display: flex
+		align-items: flex-end
+		margin-bottom: 50px
+		+media(lgs)
+			margin-bottom: 40px
+		&:not(:last-child)
+			margin-right: 25px
+			+media(sm)
+				margin-right: 0px
+		&--email
+			align-items: center
+			.info__elem
+				font-size: 22px
+
+	&__col
+		font-size: 14px
+		line-height: 1.2
+		color: #000000
+		text-transform: uppercase
+		padding-bottom: 3px
+
+	&__elem
+		font-size: 30px
+		line-height: 1
+		color: #000000
+		font-weight: 200
+		+media(mini)
+			font-size: 23px
+
+	&__icon
+		display: block
+		width: 20px
+		height: 20px
+		fill: #2476cc
+		margin-right: 10px
+
+	&__socials
+		display: flex
+		align-items: center
+		margin-top: 20px
+		+media(lgs)
+			margin-top: 0px
+
+	&__box 
+		display: block
+		margin-bottom: 50px
+		+media(lgs)
+			margin-bottom: 40px
+		+media(md)
+			margin-bottom: 35px
+		svg
+			display: block
+			width: 30px
+			height: 30px
+			fill: #2476cc
+			transition: 0.3s fill
+
+		&:not(:last-child)
+			margin-right: 20px
+
+		&:hover
+			svg
+				fill: #103359
+
+		&--telegram
+			svg
+				width: 36px
+
+		&--youtube
+			svg
+				width: 39px

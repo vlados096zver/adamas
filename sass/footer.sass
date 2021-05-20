@@ -1,0 +1,119 @@
+@import 'responsive'
+
+.main-footer
+	margin-top: 42px
+	&__holder
+		position: relative
+		padding-top: 95px
+		+media(mdx)
+			padding-top: 50px
+		&:after
+			position: absolute
+			content: ' '
+			top: 0px
+			left: 0px
+			width: 50%
+			height: 2px
+			background-color: #2476cc
+
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+		+media(md)
+			flex-direction: column
+			padding-bottom: 20px
+		li 
+			position: relative
+			&:hover .submenu
+				display: block
+				opacity: 1
+				visibility: visible
+		li:not(:last-child)
+			margin-right: 25px
+			+media(md)
+				margin-right: 0px
+
+	&__link
+		position: relative
+		z-index: 5
+		display: block
+		font-size: 16px
+		line-height: 1.5
+		color: #000
+		text-transform: uppercase
+		padding-top: 11px
+		margin-bottom: 38px
+		font-weight: 900
+		transition: 0.3s color
+		+media(mdx)
+			font-size: 15px
+		+media(md)
+			text-align: center
+			margin-bottom: 12px
+
+		&--active
+			position: relative
+			color: #1e69b7
+			&:after
+				position: absolute
+				content: ' '
+				top: 0px
+				left: calc(50% - 10px)
+				width: 20px
+				height: 7px
+				background-color: #f49f0e
+				border-radius: 4px
+
+		&:not(.main-footer__link--active)
+			+media(mdx)
+				padding-top: 0px
+
+		&:hover:not(.main-footer__link--active)
+			color: #103359
+
+	&__desc
+		padding-bottom: 95px
+		+media(md)
+			padding-bottom: 50px
+		p
+			font-size: 12px
+			line-height: 1.2
+			color: #000
+			text-transform: uppercase
+			text-align: center
+			+media(md)
+				line-height: 1.5
+			a
+				color: #000
+
+	.submenu
+		top: initial
+		bottom: calc(100% + 20px)
+		li
+			+media(md)
+				text-align: center
+				
+	.submenu:after
+		top: 100%
+
+.msg-modal
+	position: fixed
+	top: 30%
+	left: calc(50% - 150px)
+	width: 300px
+	padding: 20px 30px
+	border-radius: 15px
+	text-align: center
+	background-color: #0197c0
+	color: #fff
+	opacity: 0
+	visibility: hidden
+	font-size: 18px
+	line-height: 1.5
+	border-radius: 5px
+	z-index: 20
+	transition: 0.3s visibility, 0.3s opacity
+	&-active
+		opacity: 1
+		visibility: visible

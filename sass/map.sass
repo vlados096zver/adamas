@@ -1,0 +1,63 @@
+@import 'responsive'
+
+.map 
+	.title--inner
+		padding-bottom: 16px
+
+	&__wrap	
+		max-width: 730px
+		width: 100%	
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin: 0 -11px
+		+media(sm)
+			justify-content: center
+
+	&__item
+		margin: 0 11px
+		margin-bottom: 22px	
+		img
+			display: block
+			width: 100%	
+			height: 100%	
+			object-fit: cover
+			border-radius: 5px
+
+	&__desc
+		padding-bottom: 44px
+		p
+			font-size: 24px
+			line-height: 1.2
+			color: #000
+			text-transform: uppercase
+			font-family: Roboto
+
+	&__elem
+		position: relative
+		clip-path: url(#map-desc)
+		height: 1120px
+		margin-top: -170px
+		+media(lg)
+			margin-top: -130px
+		+media(lgm)
+			height: 900px
+			margin-top: -110px
+		+media(mdx)
+			clip-path: url(#map-md)
+			height: 650px
+			margin-top: -70px	
+		+media(sm)
+			clip-path: url(#map-sm)
+			height: 450px
+			margin-top: -15px	
+		iframe
+			position: absolute
+			top: -20px
+			left: 0px
+			display: block
+			width: 100%
+			height: calc(100% + 20px)
+			+media(sm)
+				top: -45px
+				height: calc(100% + 45px)

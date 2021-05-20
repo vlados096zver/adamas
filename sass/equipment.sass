@@ -1,0 +1,250 @@
+@import 'responsive'
+
+.equipment
+	&--inner
+		.title--inner
+			text-align: center
+
+		.equipment__block
+			margin-bottom: 25px
+
+		.equipment__item
+			margin-top: 105px
+			+media(mdx)
+				margin-top: 80px
+			+media(md)
+				margin-top: 40px
+
+	&__subtitle
+		font-size: 60px
+		line-height: 1
+		color: #efefef
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 50px
+		font-weight: 900
+
+	&__image
+		max-width: 1454px
+		margin: 0 auto
+
+	&__row
+		position: relative
+		margin: 0 70px
+		+media(md)
+			margin: 0 30px
+		+media(sm)
+			margin: 0px
+		
+	&__box
+		font-size: 18px
+		color: #f49f0e
+		text-transform: uppercase
+		text-align: center
+		padding: 0 20px
+		font-weight: bold
+
+	&__wrap
+		counter-reset: list_eq
+		.slick-slide
+			display: flex
+			+media(md)
+				margin: 0 20px
+				margin-top: 50px
+
+	&__elem
+		position: relative
+		font-size: 30px
+		line-height: 1
+		color: #f49f0e
+		text-transform: uppercase
+		padding-bottom: 30px
+		padding-top: 70px
+		margin-bottom: 26px
+		font-weight: 900
+		+media(md)
+			font-size: 24px
+		+media(sm)
+			font-size: 22px
+		&:after
+			position: absolute
+			content: ' '
+			bottom: 0px
+			left: 0px
+			max-width: 260px
+			width: 100%
+			height: 2px
+			background-color: #2476cc
+
+	&__block
+		position: relative
+		margin-bottom: 55px
+		+media(sm)
+			margin-bottom: 40px
+
+	&__item
+		display: flex
+		justify-content: space-between
+		margin-top: 135px
+		padding-bottom: 100px
+		+media(md)
+			flex-direction: column
+			padding-bottom: 70px
+			margin-top: 75px
+		+media(sm)
+			padding-bottom: 50px
+			margin-top: 45px
+
+		&:not(.slick-cloned)
+			.equipment__elem
+				&:before
+					position: absolute
+					top: 0px
+					left: 0px
+					font-size: 48px
+					color: #000
+					counter-increment: list_eq
+					content: "00" counter(list_eq)
+					font-weight: 200
+
+	&__col
+		position: relative
+		+media(md)
+			width: 100%
+		&--text
+			width: 54%
+			align-self: end
+			box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+			background-color: #fff
+			border-radius: 10px
+			padding: 40px	
+			padding-bottom: 50px
+			margin-left: 30px
+			+media(mdx)
+				padding: 30px 20px
+			+media(md)
+				box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1)
+				margin: 0 auto
+
+		&--block
+			width: 46%
+			margin-right: 30px
+			+media(md)	
+				max-width: 440px
+				margin: 0 auto
+
+	&__pic
+		display: flex
+		justify-content: flex-end
+		margin-top: -20px
+		margin-right: 70px
+		+media(lgxs)
+			margin-right: 35px
+		+media(mdx)
+			margin-right: 10px
+		+media(md)
+			margin-top: 50px
+		img
+			display: block
+
+	&__desc
+		p
+			font-size: 18px
+			line-height: 1.7
+			color: #000
+			+media(md)
+				font-size: 17px
+			+media(sm)
+				font-size: 16px
+			&:not(:last-child)
+				padding-bottom: 2em
+
+	&__holder
+		position: absolute
+		top: 44%
+		transform: translateY(-50%)
+		right: 0px
+		max-width: 270px
+		width: 100%
+		background-color: #fff
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)
+		border-radius: 10px
+		padding: 16px
+		+media(md)
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
+		p
+			font-size: 14px
+			line-height: 1.7
+			color: #000000
+
+	&__arrow
+		position: absolute
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 30px
+		height: 30px
+		padding: 0px
+		top: calc(50% - 15px)
+		&:after
+			position: absolute
+			content: ' '
+			width: 20px
+			height: 20px
+			top: calc(50% - 11px)
+			left: calc(50% - 3px)
+			border-left: 3px solid #2476cc
+			border-top: 3px solid #2476cc
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&:hover:after
+			border-color: #103359
+		&--dir_left
+			left: -55px
+			display: none !important
+			+media(sm)
+				left: -25px
+				display: block !important
+
+		&--dir_right
+			transform: scaleX(-1)
+			right: -55px
+			+media(lgm)
+				right -50px
+			+media(lb)
+				right: -42px
+			+media(sm)
+				right: -25px
+
+	&__btn
+		position: absolute
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 20px
+		height: 20px
+		padding: 0px
+		top: calc(50% - 10px)
+		&:after
+			position: absolute
+			content: ' '
+			width: 14px
+			height: 14px
+			top: calc(50% - 7px)
+			left: calc(50% - 3px)
+			border-left: 2px solid #2476cc
+			border-top: 2px solid #2476cc
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&:hover:after
+			border-color: #103359
+		&--dir_left
+			left: 0px
+
+		&--dir_right
+			transform: scaleX(-1)
+			right: 0px
