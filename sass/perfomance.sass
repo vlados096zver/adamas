@@ -60,14 +60,33 @@
 
 	&__gallery
 		display: flex
+		align-items: center
 		justify-content: center
 		padding-bottom: 34px
 		margin: 0 -25px
+		+media(md)
+			flex-direction: column
+			margin: 0px
 
 	&__box
+		width: 200px
 		margin: 0 25px
+		+media(md)
+			max-width: 500px
+			width: 100%
+			margin: 0px auto
+
 		img
 			display: block
+			+media(sm)
+				margin: 0 auto
+
+		&:not(:last-child)
+			+media(md)
+				margin-bottom: 25px
+
+		&--active
+			width: calc(100% - 560px)
 
 	&__dots
 		display: flex

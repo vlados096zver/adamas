@@ -39,7 +39,7 @@ $(document).ready(function() {
   })
 
   let elem = $('.block__box--add');
-  elem.on('mouseover', function(e) {
+  elem.on('click', function(e) {
     $(this).next().show();
     $(this).addClass('active');
   })
