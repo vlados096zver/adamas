@@ -954,11 +954,15 @@ img {
 }
 
 .about__text a {
-	display: inline-block;
+	display: inline;
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+.about__text a:hover {
+	text-decoration: none;
 }
 
 .about__inner {
@@ -1125,7 +1129,11 @@ img {
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+.equipment__desc a:hover {
+	text-decoration: none;
 }
 
 .equipment__holder {
@@ -1148,11 +1156,15 @@ img {
 }
 
 .equipment__holder a {
-	display: inline-block;
+	display: inline;
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+.equipment__holder a:hover {
+	text-decoration: none;
 }
 
 .equipment__arrow {
@@ -1965,11 +1977,15 @@ img {
 }
 
 .service__text a {
-	display: inline-block;
+	display: inline;
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+.service__text a:hover {
+	text-decoration: none;
 }
 
 .block {
@@ -2237,11 +2253,15 @@ img {
 }
 
 .category__block a {
-	display: inline-block;
+	display: block;
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+.category__block a:hover {
+	text-decoration: none;
 }
 
 .catalog {
@@ -2312,11 +2332,15 @@ img {
 }
 
 .catalog__block a {
-	display: inline-block;
+	display: inline;
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+.catalog__block a:hover {
+	text-decoration: none;
 }
 
 .catalog__ask {
@@ -2640,11 +2664,15 @@ img {
 }
 
 .single__text a {
-	display: inline-block;
+	display: inline;
 	font-size: 16px;
 	line-height: 1.2;
 	color: #000;
-	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+.single__text a:hover {
+	text-decoration: none;
 }
 
 .gallery {
@@ -3207,6 +3235,10 @@ img {
 	text-align: center;
 }
 
+.info__item {
+	margin-bottom: 25px;
+}
+
 .info__box {
 	margin-bottom: 35px;
 }
@@ -3251,6 +3283,10 @@ img {
 	max-width: 500px;
 	width: 100%;
 	margin: 0px auto;
+}
+
+.perfomance__box img {
+	margin: 0 auto;
 }
 
 .perfomance__box:not(:last-child) {
@@ -3451,6 +3487,10 @@ img {
 	margin-right: 0px;
 }
 
+.info__box {
+	margin-bottom: 30px;
+}
+
 .service__text h4,
 .service__text h5,
 .service__text h6 {
@@ -3478,10 +3518,6 @@ img {
 
 .perfomance__col {
 	font-size: 20px;
-}
-
-.perfomance__box img {
-	margin: 0 auto;
 }
 
 .video {
@@ -3598,6 +3634,10 @@ img {
 
 .select__wrap {
 	font-size: 15px;
+}
+
+.info__box {
+	margin-bottom: 0px;
 }
 
 }
