@@ -26,10 +26,10 @@ $(document).ready(function() {
     }
   })
 
-
   let block = $('.block__item');
   let elems;
   block.on('click', function(e) {
+    console.log(e.target);
     elems = $('.block__btn.active');
     elems.each(function(index, elem) {
       $(elem).removeClass('active');
@@ -53,7 +53,7 @@ $(document).ready(function() {
   });
 
   $('html').on('click', function(e) {
-    if (!$(e.target).is('.block__item, .block__btn, .block__box--add, .main-header__button button, .main-header__input, main-header__search-wrap, .main-header__search-btn')) {
+    if (!$(e.target).is('.block__item, .block__submenu, .block__submenu li, .block__submenu li a, .block__btn, .block__box, .block__box--add, .main-header__button button, .main-header__input, main-header__search-wrap, .main-header__search-btn')) {
       $('.main-header__search').removeClass('main-header__search-active');
       $('.block__submenu').each(function(index, elem) {
         $(elem).hide();
