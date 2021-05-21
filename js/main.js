@@ -25,41 +25,18 @@ $(document).ready(function() {
       $('.line-burger').removeClass('line-active');
     }
   })
-/*
-  let block = $('.block__item');
-
-  block.each(function(index, elem) {
-
-    let btn = $(elem);
-    btn.on('click', function(e) {
-      
-      console.log(e.target.className);
-
-        $('.block__item:not(.active)').find('.block__submenu').hide();
-        $(this).find('.block__submenu').show();
-        $(this).addClass('active'); 
-      
-        //$(this).find('.block__submenu').hide();
-       // console.log('dh');
-     // 
-    });
-
-
-  })*/
 
 
   let block = $('.block__item');
-let elems;
+  let elems;
   block.on('click', function(e) {
-     //console.log(e.target);
-     //if(e.target.className!=='block__item' || e.target.className!=='block__btn') return false;
-      elems = $('.block__btn.active');
-     elems.each(function(index, elem) {
+    elems = $('.block__btn.active');
+    elems.each(function(index, elem) {
       $(elem).removeClass('active');
       $(elem).parent().find('.block__submenu').hide();
-     })
-      $(this).find('.block__submenu').show();
-      $(this).find('.block__btn').addClass('active'); 
+    })
+    $(this).find('.block__submenu').show();
+    $(this).find('.block__btn').addClass('active');
   })
 
 
@@ -78,9 +55,9 @@ let elems;
   $('html').on('click', function(e) {
     if (!$(e.target).is('.block__item, .block__btn, .block__box--add, .main-header__button button, .main-header__input, main-header__search-wrap, .main-header__search-btn')) {
       $('.main-header__search').removeClass('main-header__search-active');
-  $('.block__submenu').each(function(index, elem) {
-      $(elem).hide();
-     })
+      $('.block__submenu').each(function(index, elem) {
+        $(elem).hide();
+      })
     }
   });
 
@@ -114,7 +91,7 @@ let elems;
   });
 
   const equipmentDesc = $('.equipment__wrap:not(.equipment__wrap--single');
- // console.log(equipmentDesc);
+  // console.log(equipmentDesc);
   let arrowsEquipment = $('.equipment__arrows');
   equipmentDesc.slick({
     infinite: true,
