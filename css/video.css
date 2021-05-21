@@ -1,0 +1,148 @@
+.video {
+	padding-bottom: 120px;
+}
+
+.video__box {
+	position: relative;
+}
+
+.video__wrap {
+	margin-top: 40px;
+}
+
+.video__row {
+	max-width: 1000px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.video__subtitle {
+	font-size: 24px;
+	line-height: 1.2;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 45px;
+	font-family: Roboto;
+}
+
+.video__desc {
+	padding-bottom: 70px;
+}
+
+.video__desc p {
+	font-size: 18px;
+	line-height: 1.7;
+	color: #000;
+	text-align: center;
+	font-family: Roboto;
+}
+
+.video__block {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	min-height: 200px;
+	height: 0px;
+}
+
+.video__block iframe {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+}
+
+.video__arrow {
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	width: 30px;
+	height: 30px;
+	padding: 0px;
+	top: 0px;
+	transition: 0.3s top, 0.3s opacity;
+}
+
+.video__arrow:after {
+	position: absolute;
+	content: ' ';
+	width: 20px;
+	height: 20px;
+	top: calc(50% - 10px);
+	left: calc(50% - 3px);
+	border-left: 3px solid #2476cc;
+	border-top: 3px solid #2476cc;
+	transform: rotate(-45deg);
+	transition: 0.3s border;
+}
+
+.video__arrow:hover:after {
+	border-color: #103359;
+}
+
+.video__arrow--dir_left {
+	left: 0px;
+}
+
+.video__arrow--dir_right {
+	transform: scaleX(-1);
+	right: 0px;
+}
+
+.video__arrow.hide {
+	opacity: 0;
+}
+
+@media screen and (max-width: 1050px) {
+
+.video__arrow--dir_left {
+	left: -10px;
+}
+
+.video__arrow--dir_right {
+	right: -10px;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.video {
+	padding-bottom: 85px;
+}
+
+.video__subtitle {
+	font-size: 22px;
+	margin-bottom: 40px;
+}
+
+.video__desc {
+	padding-bottom: 45px;
+}
+
+.video__desc p {
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.video {
+	padding-bottom: 65px;
+}
+
+.video__subtitle {
+	font-size: 20px;
+}
+
+}
+

@@ -1,0 +1,172 @@
+.main-footer {
+	margin-top: 42px;
+}
+
+.main-footer__holder {
+	position: relative;
+	padding-top: 95px;
+}
+
+.main-footer__holder:after {
+	position: absolute;
+	content: ' ';
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	height: 2px;
+	background-color: #2476cc;
+}
+
+.main-footer__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-footer__list li {
+	position: relative;
+}
+
+.main-footer__list li:hover .submenu {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+.main-footer__list li:not(:last-child) {
+	margin-right: 25px;
+}
+
+.main-footer__link {
+	position: relative;
+	z-index: 5;
+	display: block;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #000;
+	text-transform: uppercase;
+	padding-top: 11px;
+	margin-bottom: 38px;
+	font-weight: 900;
+	transition: 0.3s color;
+}
+
+.main-footer__link--active {
+	position: relative;
+	color: #1e69b7;
+}
+
+.main-footer__link--active:after {
+	position: absolute;
+	content: ' ';
+	top: 0px;
+	left: calc(50% - 10px);
+	width: 20px;
+	height: 7px;
+	background-color: #f49f0e;
+	border-radius: 4px;
+}
+
+.main-footer__link:hover:not(.main-footer__link--active) {
+	color: #103359;
+}
+
+.main-footer__desc {
+	padding-bottom: 95px;
+}
+
+.main-footer__desc p {
+	font-size: 12px;
+	line-height: 1.2;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.main-footer__desc p a {
+	color: #000;
+}
+
+.main-footer .submenu {
+	top: initial;
+	bottom: calc(100% + 20px);
+}
+
+.main-footer .submenu:after {
+	top: 100%;
+}
+
+.msg-modal {
+	position: fixed;
+	top: 30%;
+	left: calc(50% - 150px);
+	width: 300px;
+	padding: 20px 30px;
+	border-radius: 15px;
+	text-align: center;
+	background-color: #0197c0;
+	color: #fff;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 18px;
+	line-height: 1.5;
+	border-radius: 5px;
+	z-index: 20;
+	transition: 0.3s visibility, 0.3s opacity;
+}
+
+.msg-modal-active {
+	opacity: 1;
+	visibility: visible;
+}
+
+@media screen and (max-width: 1050px) {
+
+.main-footer__holder {
+	padding-top: 50px;
+}
+
+.main-footer__link {
+	font-size: 15px;
+}
+
+.main-footer__link:not(.main-footer__link--active) {
+	padding-top: 0px;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.main-footer__list {
+	flex-direction: column;
+	padding-bottom: 20px;
+}
+
+.main-footer__list li:not(:last-child) {
+	margin-right: 0px;
+}
+
+.main-footer__link {
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.main-footer__link--active:after {
+	display: none;
+}
+
+.main-footer__desc {
+	padding-bottom: 50px;
+}
+
+.main-footer__desc p {
+	line-height: 1.5;
+}
+
+.main-footer .submenu li {
+	text-align: center;
+}
+
+}
+

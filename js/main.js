@@ -29,14 +29,15 @@ $(document).ready(function() {
   let block = $('.block__item');
   let elems;
   block.on('click', function(e) {
-    console.log(e.target);
-    elems = $('.block__btn.active');
-    elems.each(function(index, elem) {
-      $(elem).removeClass('active');
-      $(elem).parent().find('.block__submenu').hide();
-    })
-    $(this).find('.block__submenu').show();
-    $(this).find('.block__btn').addClass('active');
+      if(e.target.tagName=='BUTTON') {
+      elems = $('.block__btn.active');
+      elems.each(function(index, elem) {
+        $(elem).removeClass('active');
+        $(elem).parent().find('.block__submenu').hide();
+      })
+      $(this).find('.block__submenu').show();
+      $(this).find('.block__btn').addClass('active');
+    }
   })
 
 
